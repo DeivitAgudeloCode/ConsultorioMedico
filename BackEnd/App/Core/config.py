@@ -1,0 +1,3 @@
+SECRET_KEY = "super-secret-key-cambia-esto"
+ALGORITHM = "HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES = 60

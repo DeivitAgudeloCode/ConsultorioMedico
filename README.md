@@ -28,9 +28,12 @@ ConsultorioMedico/
 ├── .venv/                # Entorno virtual (NO subir al repositorio)
 ├── requirements.txt
 └── README.md
+
 ⚙️ Instalación, ejecución y mantenimiento
+
 1️⃣ Crear entorno virtual
 python -m venv .venv
+
 2️⃣ Activar entorno virtual (Windows)
 .\.venv\Scripts\activate
 Para desactivarlo:
@@ -38,14 +41,15 @@ Para desactivarlo:
 deactivate
 3️⃣ Instalar dependencias
 python -m pip install -r requirements.txt
+
 4️⃣ Versiones estables recomendadas
 Para evitar errores de autenticación con bcrypt:
-
 pip install passlib==1.7.4 bcrypt==3.2.2
+
 5️⃣ Ejecutar el servidor
 Ubícate en la carpeta backend y ejecuta:
-
 uvicorn app.main:app --reload
+
 🌐 Accesos
 API
 👉 http://127.0.0.1:8000

@@ -5,14 +5,12 @@ from App.Models.medicamento import Medicamento
 
 def crear_medicamento(
     nombre: str,
-    descripcion: str | None,
     es_no_pos: bool
 ) -> Medicamento:
     db: Session = SessionLocal()
     try:
         medicamento = Medicamento(
             nombre=nombre,
-            descripcion=descripcion,
             es_no_pos=es_no_pos
         )
         db.add(medicamento)

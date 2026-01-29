@@ -27,7 +27,6 @@ def crear(
 ):
     return crear_medicamento(
         nombre=data.nombre,
-        descripcion=data.descripcion,
         es_no_pos=data.es_no_pos
     )
 

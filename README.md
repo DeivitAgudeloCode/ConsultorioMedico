@@ -35,20 +35,23 @@ ConsultorioMedico/
 python -m venv .venv
 
 2️⃣ Activar entorno virtual (Windows)
-.\.venv\Scripts\activate
+.venv\Scripts\activate
 Para desactivarlo:
-
 deactivate
-3️⃣ Instalar dependencias
+
+3️⃣ Instalar dependencias antes de entrar a la carpeta backend.
 python -m pip install -r requirements.txt
+
 
 4️⃣ Versiones estables recomendadas
 Para evitar errores de autenticación con bcrypt:
 pip install passlib==1.7.4 bcrypt==3.2.2
 
 5️⃣ Ejecutar el servidor
-Ubícate en la carpeta backend y ejecuta:
-uvicorn app.main:app --reload
+Ubícate en la carpeta backend con:
+cd BackEnd
+y ejecuta:
+uvicorn App.main:app --reload
 
 🌐 Accesos
 API
@@ -57,8 +60,9 @@ API
 Documentación Swagger
 👉 http://127.0.0.1:8000/docs
 
+
 🧹 Limpieza de caché (pycache)
 Si el proyecto presenta comportamientos extraños o errores persistentes, puedes limpiar la caché de Python ejecutando en PowerShell:
-
 Get-ChildItem -Recurse -Directory -Filter __pycache__ | Remove-Item -Recurse -Force
+
 Esto elimina todos los directorios __pycache__ sin necesidad de hacerlo manualmente.

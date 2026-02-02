@@ -3,11 +3,13 @@ from fastapi import FastAPI
 from App.Core.database import engine
 from App.Routers.auth import router as auth_router
 from App.Routers.medicamento import router as medicamento_router
+from App.Routers.solicitud_router import router as solicitud_router
 
 app = FastAPI(title="Consultorio Médico API")
 
 app.include_router(auth_router)
 app.include_router(medicamento_router)
+app.include_router(solicitud_router)
 
 # Test conexión DB
 try:

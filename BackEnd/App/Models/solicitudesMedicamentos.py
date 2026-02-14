@@ -5,7 +5,7 @@ from sqlalchemy.orm import relationship
 from App.Core.database import Base
 
 class soliMedicamentos(Base):
-    __tablename__ = "soliMedicamentos"
+    __tablename__ = "solicitudes_medicamentos"
 
     id = Column(Integer, primary_key=True, index=True)
 
@@ -14,7 +14,7 @@ class soliMedicamentos(Base):
     
     numero_orden = Column(String, nullable=False)
     direccion = Column(String(150), nullable=False)
-    telefono = Column(Integer, nullable=False)
+    telefono = Column(String(150), nullable=False)
     correo = Column(String(150), unique=True, nullable=False)
     fecha_creacion = Column(DateTime, server_default=func.now())
 

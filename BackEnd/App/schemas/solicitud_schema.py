@@ -7,8 +7,7 @@ class SolicitudCreate(BaseModel):
     num_orden: Optional[str] = None
     direccion: Optional[str] = None
     telefono: Optional[str] = None
-    correo_contacto: Optional[str] = None
-
+    correo: Optional[str] = None
 
 class SolicitudResponse(BaseModel): 
     id: int

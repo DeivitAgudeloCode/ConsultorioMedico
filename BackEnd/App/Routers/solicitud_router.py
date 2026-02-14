@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, status, HTTPException
 
-from App.Schemas.solicitud_schema import (
+from App.schemas.solicitud_schema import (
     SolicitudCreate,
     SolicitudResponse
 )
@@ -10,7 +10,7 @@ from App.Models.usuario import Usuario
 
 router = APIRouter(
     prefix="/solicitudes",
-    tags=["solicitudes"]
+    tags=["Solicitudes"]
 )
 
 @router.post(
@@ -25,12 +25,12 @@ def crearSoli(
 ):
     try:
         return crear_solicitud(
-            usuario=current_user,
+            usuario_id=current_user,
             medicamento_id=data.medicamento_id,
             num_orden=data.num_orden,
             direccion=data.direccion,
             telefono=data.telefono,
-            correo_contacto=data.correo_contacto
+            correo=data.correo,
         )
     except ValueError as e:
         raise HTTPException(

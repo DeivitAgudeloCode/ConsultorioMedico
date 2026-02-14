@@ -11,7 +11,7 @@ def crear_solicitud(
     num_orden: str | None,
     direccion: str | None,
     telefono: str | None,
-    correo_contacto: str | None
+    correo: str | None
 ) -> soliMedicamentos: 
     db: Session = SessionLocal()
 
@@ -29,17 +29,17 @@ def crear_solicitud(
                 num_orden,
                 direccion,
                 telefono,
-                correo_contacto
+                correo
             ]):
                 raise ValueError("el medicamento es NO POS, debe ingresar direccion, telefono y correo.")
             
-        solicitud = solicitud(
+        solicitud = soliMedicamentos(
             usuario_id = usuario_id,
             medicamento_id = medicamento_id,
             numero_orden = num_orden,
             direccion=direccion,
             telefono= telefono,
-            correo_contacto=correo_contacto
+            correo=correo
         )
 
         db.add(solicitud)

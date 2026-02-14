@@ -11,7 +11,7 @@ app.include_router(auth_router)
 app.include_router(medicamento_router)
 app.include_router(solicitud_router)
 
-# Test conexión DB
+# Test conexión a DB
 try:
     with engine.connect():
         print("Conexión exitosa a SQL")

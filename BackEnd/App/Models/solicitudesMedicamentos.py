@@ -16,6 +16,7 @@ class soliMedicamentos(Base):
     direccion = Column(String(150), nullable=False)
     telefono = Column(String(150), nullable=False)
     correo = Column(String(150), unique=True, nullable=False)
+    estado = Column(String(150), unique=True, nullable=False)
     fecha_creacion = Column(DateTime, server_default=func.now())
 
     usuario = relationship("Usuario")

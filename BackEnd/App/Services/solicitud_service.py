@@ -6,7 +6,7 @@ from App.Models.solicitudesMedicamentos import soliMedicamentos
 from App.Models.medicamento import Medicamento
 
 def crear_solicitud(
-    usuario_id: Usuario,
+    usuario_id: Usuario ,
     medicamento_id: int,
     num_orden: str | None,
     direccion: str | None,
@@ -14,7 +14,7 @@ def crear_solicitud(
     correo: str | None
 ) -> soliMedicamentos: 
     db: Session = SessionLocal()
-
+    print("valores",usuario_id),
     try: 
         medicamento = (
             db.query(Medicamento)

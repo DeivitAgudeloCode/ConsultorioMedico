@@ -25,7 +25,7 @@ def crearSoli(
 ):
     try:
         return crear_solicitud(
-            usuario_id=current_user,
+            usuario_id=current_user.id,
             medicamento_id=data.medicamento_id,
             num_orden=data.num_orden,
             direccion=data.direccion,

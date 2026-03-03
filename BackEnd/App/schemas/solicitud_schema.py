@@ -13,7 +13,6 @@ class SolicitudResponse(BaseModel):
     id: int
     usuario_id: int
     medicamento_id: int
-    estado: str
 
 class Config:
     from_attributes = True

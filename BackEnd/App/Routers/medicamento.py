@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, status
 
-from App.Schemas.medicamento_schema import (
+from App.schemas.medicamento_schema import (
     MedicamentoCreate,
     MedicamentoResponse
 )

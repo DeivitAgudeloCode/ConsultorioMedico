@@ -2,7 +2,7 @@ from pydantic import BaseModel, EmailStr, field_validator
 
 class RegisterRequest(BaseModel):
     nombre: str
-    correo: EmailStr
+    correo: str
     password: str
 
     @field_validator("password")
@@ -15,7 +15,7 @@ class RegisterRequest(BaseModel):
         return value
 
 class LoginRequest(BaseModel):
-    correo: EmailStr
+    correo: str 
     password: str
 
 class TokenResponse(BaseModel):

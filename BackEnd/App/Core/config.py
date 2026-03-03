@@ -1,3 +1,3 @@
-SECRET_KEY = "super-secret-key-cambia-esto"
+SECRET_KEY = "NadieSabeLaConstraseña"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60

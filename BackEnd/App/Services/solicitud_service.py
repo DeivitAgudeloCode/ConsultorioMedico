@@ -11,7 +11,7 @@ def crear_solicitud(
     num_orden: str | None,
     direccion: str | None,
     telefono: str | None,
-    correo: str | None
+    correo: str | None,
 ) -> soliMedicamentos: 
     db: Session = SessionLocal()
     print("valores",usuario_id),
@@ -39,7 +39,7 @@ def crear_solicitud(
             numero_orden = num_orden,
             direccion=direccion,
             telefono= telefono,
-            correo=correo
+            correo=correo,
         )
 
         db.add(solicitud)

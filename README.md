@@ -13,6 +13,7 @@ Expone una API REST con documentación automática vía Swagger.
 - SQLAlchemy
 - Passlib
 - Bcrypt
+- Axios 
 
 ---
 

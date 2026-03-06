@@ -2,14 +2,13 @@ from pydantic import BaseModel
 from typing import Optional
 
 class SolicitudCreate(BaseModel):
-    usuario_id: int
     medicamento_id: int
     num_orden: Optional[str] = None
     direccion: Optional[str] = None
     telefono: Optional[str] = None
     correo: Optional[str] = None
 
-class SolicitudResponse(BaseModel): 
+class SolicitudResponse(BaseModel):
     id: int
     usuario_id: int
     medicamento_id: int

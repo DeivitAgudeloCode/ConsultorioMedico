@@ -63,7 +63,8 @@ Documentación Swagger
 
 
 🧹 Limpieza de caché (pycache)
-Si el proyecto presenta comportamientos extraños o errores persistentes, puedes limpiar la caché de Python ejecutando en PowerShell:
+Si el proyecto presenta comportamientos extraños o errores persistentes, puedes limpiar
+la caché de Python ejecutando en PowerShell:
 Get-ChildItem -Recurse -Directory -Filter __pycache__ | Remove-Item -Recurse -Force
 
 Esto elimina todos los directorios __pycache__ sin necesidad de hacerlo manualmente.
